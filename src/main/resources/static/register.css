@@ -1,20 +1,33 @@
 body {
     font-family: Arial, sans-serif;
+    background-image: url("https://t3.ftcdn.net/jpg/04/38/61/36/360_F_438613643_ErB3cBJ3eI38XbJE5cJZcOttEcTtfLik.jpg");
     background-color: #fff3e0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     margin: 0;
     padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;  /* Justerar innehållet till toppen */
+    align-items: center;          /* Behåller horisontell centrering */
+    flex-direction: column;       /* Gör så att texten och formuläret ligger under varandra */
+    padding-top: 10px;            /* Lägger till lite utrymme från toppen */
 }
 
 header {
-    background-color: #ff9800;
+    background-color: rgba(0, 51, 102, 0.7);
     color: white;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
     font-size: 30px;
+    width: 100%;
+    position: relative;
+    top: -10px; /* Flytta headern uppåt */
 }
 
 section {
-    margin: 50px auto;
+    margin-top: 30px; /* Lite avstånd mellan headern och formuläret */
     width: 300px;
     background: white;
     padding: 30px;
@@ -38,7 +51,7 @@ input {
 
 button {
     width: 100%;
-    background-color: #ff9800;
+    background-color: #003366;
     color: white;
     padding: 10px;
     border: none;
@@ -47,5 +60,20 @@ button {
 }
 
 button:hover {
-    background-color: #fb8c00;
+     background-color: #4CAF50; /* Grön färg när man hovrar */
+     background-color: #45a049; /* En mörkare grön nyans för hover-effekt */
+}
+#username {
+    margin-left: -3%; /* Ökar avståndet på vänster sida */
+    margin-right: 8%; /* Minskar avståndet på höger sida */
+}
+
+#password {
+    margin-left: -3%; /* Ökar avståndet på vänster sida */
+    margin-right: 8%; /* Minskar avståndet på höger sida */
+}
+
+#email {
+    margin-left: -3%; /* Ökar avståndet på vänster sida */
+    margin-right: 8%; /* Minskar avståndet på höger sida */
 }

@@ -6,6 +6,7 @@
     <title>Login</title>
     <link rel="stylesheet" href="/login.css">
 </head>
+
 <body>
 
 <header>
@@ -13,7 +14,7 @@
 </header>
 
 <section>
-    <form action="/api/users/login" method="POST">
+    <form action="/login" method="POST">
         <label for="username">Username</label>
         <input type="text" id="username" name="username" required>
 
@@ -22,6 +23,14 @@
 
         <button type="submit">Login</button>
     </form>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        if (params.has('logout')) {
+            alert("Du har loggats ut.");
+        }
+    </script>
+
+
 </section>
 
 </body>

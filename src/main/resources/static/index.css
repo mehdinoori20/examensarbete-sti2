@@ -75,3 +75,23 @@ footer {
     font-style: italic;
 
 }
+.logout-button-container {
+    position: fixed;
+    bottom: 20px; /* Justera avståndet från botten */
+    right: 20px;  /* Justera avståndet från höger kant */
+    z-index: 1000; /* Gör så att knappen ligger ovanpå andra element */
+}
+
+.logout-button-container button {
+    padding: 10px 20px;
+    background-color: #ff4c4c; /* Färg för knappen (kan justeras) */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.logout-button-container button:hover {
+    background-color: #e03e3e; /* Hover-effekt för knappen */
+}
+
