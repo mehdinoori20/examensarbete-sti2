@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Meal Recipes</title>
+    <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+<header>
+    <h1>Welcome to Student Meal Recipes</h1>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/api/users/register">Register</a>
+        <a href="/api/users/login">Login</a>
+    </nav>
+</header>
+
+<section class="main-content">
+    <h2>Explore Recipes</h2>
+    <form action="/recipes" method="GET">
+        <input type="hidden" name="category" value="Seafood">
+        <button type="submit">Get Meals and Desserts Recipes</button>
+    </form>
+    <div class="recipe-list">
+        <!-- Här kan receptlistan renderas dynamiskt -->
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Student Meal Recipes</p>
+</footer>
+</body>
+</html>
