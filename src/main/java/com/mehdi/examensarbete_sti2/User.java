@@ -1,7 +1,7 @@
 package com.mehdi.examensarbete_sti2;
 
 import jakarta.persistence.*;
-import lombok.Data;
+
 
 
 @Entity
@@ -45,5 +45,5 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
-// Lombok @Data kommer att generera getters och setters för alla fält, så du behöver inte skriva dem manuellt.
+// Lombok @Data generera getters och setters
 }

@@ -17,13 +17,13 @@ public class UserController {
     private PasswordEncoder passwordEncoder;
 
     // 8082/login
-    @GetMapping("/register") // /api/users/register
+    @GetMapping("/register")
     public String showRegisterPage(Model model) {
         model.addAttribute("registerRequest", new RegisterRequest());
         return "register"; // Visa register.html
     }
 
-    @PostMapping("/register") ///api/users/register
+    @PostMapping("/register")
     public String registerUser(@ModelAttribute RegisterRequest registerRequest) {
         User user = new User();
         user.setUsername(registerRequest.getUsername());
@@ -34,7 +34,7 @@ public class UserController {
         return "redirect:/api/users/login";
 
     }
-    @GetMapping("/login")// 8081/api/users/login, 8081/login
+    @GetMapping("/login")
     public String showLoginPage(Model model) {
         model.addAttribute("loginRequest", new LoginRequest());
         return "login"; // Visa login.html
@@ -45,5 +45,6 @@ public class UserController {
         // Hantera login logik här (kan anpassas till Spring Security)
         return "redirect:/"; // Redirect till startsidan efter inloggning
     }
+
 
 }

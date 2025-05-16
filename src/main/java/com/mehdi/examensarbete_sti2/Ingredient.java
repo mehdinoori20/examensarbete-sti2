@@ -1,6 +1,5 @@
 package com.mehdi.examensarbete_sti2;
 
-
 import jakarta.persistence.*;
 import lombok.Data;
 

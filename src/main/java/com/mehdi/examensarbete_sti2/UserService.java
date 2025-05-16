@@ -2,6 +2,7 @@ package com.mehdi.examensarbete_sti2;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import java.util.List;
 
 @Service
 public class UserService {
@@ -15,8 +16,16 @@ public class UserService {
         userRepository.save(user);
     }
 
-    // Hitta användare baserat på användarnamn eller email (kan användas för inloggning)
     public User findByUsernameOrEmail(String usernameOrEmail) {
-        return userRepository.findByUsernameOrEmail(usernameOrEmail, usernameOrEmail);
+        List<User> users = userRepository.findByUsernameOrEmail(usernameOrEmail, usernameOrEmail);
+
+        if (users.isEmpty()) {
+            return null; // eller kasta ett undantag
+        } else if (users.size() > 1) {
+            throw new IllegalStateException("Flera användare hittades med samma användarnamn eller e-post: " + usernameOrEmail);
+        }
+
+        return users.get(0);
     }
+
 }
